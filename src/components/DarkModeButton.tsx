@@ -6,7 +6,7 @@ export default function DarkModeButton() {
     const { toggleDarkMode } = useContext(DarkModeContext);
 
     return (
-        <button className="cursor-pointer" onClick={() => toggleDarkMode(null)}>
+        <button className="cursor-pointer" onClick={toggleDarkMode}>
             <Brightness4Icon />
         </button>
     )
