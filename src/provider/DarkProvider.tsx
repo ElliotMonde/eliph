@@ -5,9 +5,12 @@ export interface DarkModeContextType {
     toggleDarkMode: React.Dispatch<React.SetStateAction<boolean | null>>;
 }
 
+interface  DarkProviderProp { 
+    children: React.ReactNode;
+}
 export const DarkModeContext = createContext<DarkModeContextType>({ isDark: true, toggleDarkMode: () => { } })
 
-export function DarkModeProvider({ children }) {
+export function DarkModeProvider({ children }: DarkProviderProp) {
     const [isDark, setIsDark] = useState<boolean>(true);
     const toggleDarkMode = () => {
         setIsDark(!isDark);
