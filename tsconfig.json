@@ -7,12 +7,12 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
     "baseUrl": ".",
+    "moduleResolution": "bundler",
     "paths": {
       "@/*": ["./src/*"]
     },
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
