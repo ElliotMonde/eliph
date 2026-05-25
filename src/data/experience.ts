@@ -40,7 +40,7 @@ export const workExperience: Experience[] = [
         endDate: "Present",
         location: "Singapore",
         description: [""],
-        logo: "src/assets/visa_logo.svg",
+        logo: "/visa_logo.svg",
     },
     {
         company: "FCC Lab",
@@ -55,7 +55,7 @@ export const workExperience: Experience[] = [
         },
         location: "Singapore",
         description: [""],
-        logo: "src/assets/fcc_logo.svg",
+        logo: "/fcc_logo.svg",
     },
     {
         company: "Knovel Engineering",
@@ -70,7 +70,7 @@ export const workExperience: Experience[] = [
         },
         location: "Singapore",
         description: [""],
-        logo: "src/assets/knovel_logo.svg",
+        logo: "/knovel_logo.svg",
     },
     {
         company: "Activate Interactive",
@@ -85,7 +85,7 @@ export const workExperience: Experience[] = [
         },
         location: "Singapore",
         description: [""],
-        logo: "src/assets/Activate_logo.svg",
+        logo: "/Activate_logo.svg",
     },
     {
         company: "HTX",
@@ -100,6 +100,6 @@ export const workExperience: Experience[] = [
         },
         location: "Singapore",
         description: [""],
-        logo: "src/assets/htx_logo.svg",
+        logo: "/htx_logo.svg",
     },
 ]

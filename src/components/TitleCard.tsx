@@ -42,7 +42,7 @@ export default function TitleCard() {
         <div className={`flex flex-1 flex-col ml-5 items-center gap-6 pt-[5%] dark:text-white`}>
             {/* Profile photo */}
             <Card sx={photoStyle}>
-                <img className="w-full h-full object-cover" src="/src/assets/Elliot.png" alt="Elliot Phua" />
+                <img className="w-full h-full object-cover" src="/Elliot.png" alt="Elliot Phua" />
             </Card>
             {/* Name */}
             <div className="flex-col w-fit">
