@@ -17,27 +17,45 @@ const photoStyle: React.CSSProperties = {
 
 const email = "elliotphua@gmail.com";
 
+interface SocialProp {
+    link: string;
+    icon: React.ReactNode;
+}
+function Social({ link, icon }: SocialProp) {
+    return (
+        <div className="hover:border-b-3 transition-all duration-150 ease-in pb-1">
+            <a target="_blank" href={link}>
+                {icon}
+            </a>
+        </div>
+    )
+}
+
 export default function TitleCard() {
     const { setAlertDetails } = useContext(AlertContext);
-    const copyEmail = () => { 
+    const copyEmail = () => {
         navigator.clipboard.writeText(email)
-        setAlertDetails({icon: CheckIcon, text: "Successfully copied email. ", isAlert: true, opacity: 100})
+        setAlertDetails({ icon: CheckIcon, text: "Successfully copied email. ", isAlert: true, opacity: 100 })
     }
 
-    return <div className="flex flex-1 flex-col ml-5 items-center gap-6">
-        {/* Profile photo */}
-        <Card sx={photoStyle}>
-            <img className="w-full h-full object-cover" src="/src/assets/Elliot.png" alt="Elliot Phua" />
-        </Card>
-        {/* Name */}
-        <div className="flex-col w-fit">
-            <TextType text="Elliot Phua" theme="header" />
-            {/* Socials */}
-            <div className="flex flex-row items-left gap-3">
-                <a target="_blank" href="https://www.linkedin.com/in/elliotphua/"><LinkedInIcon /></a>
-                <a target="_blank" href="https://github.com/ElliotMonde"><GitHubIcon /></a>
-                <a target="_blank" className="cursor-pointer" onClick={copyEmail}><EmailIcon /></a>
+    return (
+        <div className={`flex flex-1 flex-col ml-5 items-center gap-6 pt-[5%] dark:text-white`}>
+            {/* Profile photo */}
+            <Card sx={photoStyle}>
+                <img className="w-full h-full object-cover" src="/src/assets/Elliot.png" alt="Elliot Phua" />
+            </Card>
+            {/* Name */}
+            <div className="flex-col w-fit">
+                <TextType text="Elliot Phua" theme="header" />
+                {/* Socials */}
+                <div className="flex flex-row items-left gap-3">
+                    <Social link="https://www.linkedin.com/in/elliotphua/" icon=<LinkedInIcon /> />
+                    <Social link="https://github.com/ElliotMonde" icon=<GitHubIcon /> />
+                    <div className="hover:border-b-3 transition-all duration-150 ease-in pb-1">
+                        <a target="_blank" className="cursor-pointer" onClick={copyEmail}><EmailIcon />
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        </div>)
 }
