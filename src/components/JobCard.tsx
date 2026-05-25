@@ -1,14 +1,14 @@
 import { month, type Experience } from '../data/experience'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import Typography from '@mui/material/Typography'
+import TextType from './typography/TextType'
 
 const cardStyle: React.CSSProperties = {
     background: 'none',
     color: 'white',
     borderStyle: 'solid',
     borderColor: '#FFFFFF',
-    borderWidth: '0px'
+    borderWidth: '0px',
 }
 
 export default function JobCard({
@@ -21,22 +21,14 @@ export default function JobCard({
 }: Experience) {
     return (
         <Card style={cardStyle}>
-            <CardContent>
-                <Typography>
-                    <h2>{company}</h2>
-                </Typography>
-                <Typography>
-                    <p>{role}</p>
-                </Typography>
-                <Typography>
-                    <span>{`${month[startDate.month]} ${startDate.year} - ${endDate}`}</span>
-                </Typography>
-                <Typography>
-                    <span>{location}</span>
-                </Typography>
-                <Typography>
-                    <span>{description}</span>
-                </Typography>
+            <CardContent className='ml-[2%] mr-[2%] w-[80%]'>
+                <TextType text={company} theme='h3' />
+                <TextType text={role} theme="caption" />
+                <TextType text={`${month[startDate.month]} ${startDate.year} - ${typeof endDate == "string" ? endDate : `${month[endDate.month]} ${endDate.year}`}`} theme="date" />
+                <TextType text={location} theme="date" />
+                {description.map((txt, ind) =>
+                    <TextType key={company + ind} text={txt} theme="body" />
+                )}
             </CardContent>
         </Card>
     )
