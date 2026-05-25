@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 
 export interface DarkModeContextType {
     isDark: boolean;
-    toggleDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+    toggleDarkMode: React.Dispatch<React.SetStateAction<boolean | null>>;
 }
 
 export const DarkModeContext = createContext<DarkModeContextType>({ isDark: true, toggleDarkMode: () => { } })
