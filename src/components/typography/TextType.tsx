@@ -56,7 +56,7 @@ const dateStyle: TextStyle = {
 }
 
 function selectTextStyle(theme: string) {
-    const styles = {
+    const styles: Record<string, TextStyle> = {
         "header": headerStyle,
         "subheader": subheaderStyle,
         "h3": h3Style,
