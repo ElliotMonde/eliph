@@ -26,6 +26,7 @@ export interface Experience {
     endDate: FormattedDate | string;
     location: string;
     description: string[];
+    logo: string;
  }
 
 export const workExperience: Experience[] = [
@@ -38,7 +39,23 @@ export const workExperience: Experience[] = [
         },
         endDate: "Present",
         location: "Singapore",
-        description: [""]
+        description: [""],
+        logo: "src/assets/visa_logo.svg",
+    },
+    {
+        company: "FCC Lab",
+        role: "AI Reserach Assistant",
+        startDate: {
+            month: 9,
+            year: 2025
+        },
+        endDate: {
+            month: 11,
+            year: 2025
+        },
+        location: "Singapore",
+        description: [""],
+        logo: "src/assets/fcc_logo.svg",
     },
     {
         company: "Knovel Engineering",
@@ -52,7 +69,8 @@ export const workExperience: Experience[] = [
             year: 2025
         },
         location: "Singapore",
-        description: [""]
+        description: [""],
+        logo: "src/assets/knovel_logo.svg",
     },
     {
         company: "Activate Interactive",
@@ -66,10 +84,11 @@ export const workExperience: Experience[] = [
             year: 2025
         },
         location: "Singapore",
-        description: [""]
+        description: [""],
+        logo: "src/assets/Activate_logo.svg",
     },
     {
-        company: "HTX Singapore",
+        company: "HTX",
         role: "Software Developer Intern",
         startDate: {
             month: 5,
@@ -80,6 +99,7 @@ export const workExperience: Experience[] = [
             year: 2023
         },
         location: "Singapore",
-        description: [""]
+        description: [""],
+        logo: "src/assets/htx_logo.svg",
     },
 ]
