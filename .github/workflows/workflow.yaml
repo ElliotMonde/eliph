@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-name: Manual Workflow
-on:
   workflow_dispatch:
     inputs:
       logLevel:
@@ -17,7 +15,7 @@ on:
         - info
         - warning
         - debug
-        
+
 permissions:
   contents: write
 
