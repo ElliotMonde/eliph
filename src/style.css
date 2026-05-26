@@ -11,14 +11,13 @@ html {
   --text: #000000;
   --text-h: #000000;
   --bg: #fff;
-  --code-bg: #f4f3ec;
+  --code-bg: #451e51;
+  --code-text: #80e6da;
 
-  --serif: "Averia Serif Libre", Georgia, system-ui, 'Segoe UI', Roboto, sans-serif;
-  --san: "Gothic A1", Georgia, system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: "Averia Serif Libre", Georgia, system-ui, 'Segoe UI', Roboto, sans-serif;
+  --serif: "Averia Serif Libre", serif;
+  --san: "Gothic A1", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--san);
   letter-spacing: 0.18px;
   color-scheme: light dark;
   font-synthesis: none;
@@ -27,3 +26,41 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body {
+  transition: background-color 0.6s ease-in-out;
+}
+
+.header {
+  font: 2rem var(--serif);
+  font-weight: bold;
+}
+
+.subheader {
+  font: 1.5rem var(--serif);
+  font-weight: 400;
+}
+
+.h3 {
+  font: 1.3rem var(--serif);
+  font-weight: 400;
+}
+
+.caption {
+  font: 1rem var(--san);
+  font-weight: 300;
+}
+
+.body {
+  font: 1rem var(--san);
+  font-weight: 300;
+}
+
+.date {
+  font: 0.8rem var(--san);
+  font-weight: 0.8rem;
+}
+
+.min-container {
+  min-width: 250px;
+}

@@ -15,9 +15,7 @@ export default function JobCard({
     const [isHover, setIsHover] = useState<boolean>(false);
     const cardStyle: React.CSSProperties = {
         background: 'none',
-        borderStyle: 'solid',
-        borderColor: '#FFFFFF',
-        borderWidth: '0px',
+        border: "none",
         display: "flex",
         flex: "flex-col",
         paddingLeft: "3%",

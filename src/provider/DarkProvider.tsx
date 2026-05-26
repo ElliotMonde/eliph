@@ -5,13 +5,14 @@ export interface DarkModeContextType {
     toggleDarkMode: React.Dispatch<React.SetStateAction<boolean | null>>;
 }
 
-interface  DarkProviderProp { 
+interface DarkProviderProp {
     children: React.ReactNode;
 }
-export const DarkModeContext = createContext<DarkModeContextType>({ isDark: true, toggleDarkMode: () => { } })
+const deviceDarkPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+export const DarkModeContext = createContext<DarkModeContextType>({ isDark: deviceDarkPreference, toggleDarkMode: () => { } })
 
 export function DarkModeProvider({ children }: DarkProviderProp) {
-    const [isDark, setIsDark] = useState<boolean>(true);
+    const [isDark, setIsDark] = useState<boolean>(deviceDarkPreference);
     const toggleDarkMode = () => {
         setIsDark(!isDark);
     }

@@ -12,10 +12,11 @@ const photoStyle: React.CSSProperties = {
     borderRadius: "50%",
     width: "50%",
     maxWidth: "255px",
+    minWidth: "100px",
     overflow: "hidden",
 }
 
-const email = "elliotphua@gmail.com";
+const email:string = "elliotphua@gmail.com";
 
 interface SocialProp {
     link: string;
@@ -39,7 +40,7 @@ export default function TitleCard() {
     }
 
     return (
-        <div className={`flex flex-1 flex-col ml-5 items-center gap-6 pt-[5%] dark:text-white`}>
+        <div className={`flex flex-1 flex-col items-center gap-6 pt-[5%] min-container`}>
             {/* Profile photo */}
             <Card sx={photoStyle}>
                 <img className="w-full h-full object-cover" src="/Elliot.png" alt="Elliot Phua" />
@@ -48,13 +49,10 @@ export default function TitleCard() {
             <div className="flex-col w-fit">
                 <TextType text="Elliot Phua" theme="header" />
                 {/* Socials */}
-                <div className="flex flex-row items-left gap-3">
+                <div className="flex flex-row gap-3 max-sm:justify-center">
                     <Social link="https://www.linkedin.com/in/elliotphua/" icon=<LinkedInIcon /> />
                     <Social link="https://github.com/ElliotMonde" icon=<GitHubIcon /> />
-                    <div className="hover:border-b-3 transition-all duration-150 ease-in pb-1">
-                        <a target="_blank" className="cursor-pointer" onClick={copyEmail}><EmailIcon />
-                        </a>
-                    </div>
+                    <div onClick={copyEmail}><Social link={`mailto:${email}`} icon=<EmailIcon /> /></div>
                 </div>
             </div>
         </div>)
