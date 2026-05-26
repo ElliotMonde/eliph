@@ -44,7 +44,7 @@ export const workExperience: Experience[] = [
     },
     {
         company: "FCC Lab",
-        role: "AI Reserach Assistant",
+        role: "AI Research Assistant",
         startDate: {
             month: 9,
             year: 2025

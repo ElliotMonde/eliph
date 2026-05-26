@@ -31,10 +31,10 @@ export default function App() {
     return (
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
-            <div className="flex flex-wrap justify-center w-full h-screen">
+            <div className="flex flex-col justify-center w-full h-fit">
                 <TitleCard />
-                <div className="flex flex-1 flex-col min-container">
-                <WorkExp />
+                <div className="p-12">
+                    <WorkExp />
                     <EducationSection />
                 </div>
                 {/* Floating components */}
@@ -42,7 +42,7 @@ export default function App() {
                     <Alert />
                 </div>
                 <div className="flex flex-col fixed z-0 bottom-[5%] right-[3%] gap-3">
-                    <ToTopButton/>
+                    <ToTopButton />
                     <DarkModeButton />
                 </div>
                 {/*  */}
