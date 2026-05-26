@@ -55,7 +55,7 @@ export default function TitleCard() {
             <div className="flex flex-5 flex-col w-fit min-container max-sm:justify-center ml-5 mr-5 text-balance">
                 <div className="max-sm:self-center"><TextType text="Hi, I'm Elliot!" theme="header" /></div>
                 {/* Socials */}
-                <div className="flex flex-row gap-3 max-sm:justify-center">
+                <div className="flex flex-row gap-3 mt-2 max-sm:justify-center">
                     <Social link="https://www.linkedin.com/in/elliotphua/" icon=<LinkedInIcon /> />
                     <Social link="https://github.com/ElliotMonde" icon=<GitHubIcon /> />
                     <div onClick={copyEmail}><Social link={`mailto:${email}`} icon=<EmailIcon /> /></div>

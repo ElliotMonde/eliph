@@ -9,6 +9,7 @@ import CssBaseline from "@mui/material/CssBaseline"
 import { DarkModeContext } from "./provider/DarkProvider"
 import EducationSection from "./sections/Education"
 import ToTopButton from "./components/ToTopButton"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 
 export default function App() {
     const { isDark } = useContext(DarkModeContext);
@@ -29,8 +30,13 @@ export default function App() {
         }
     }, [alertDetails.isAlert, setAlertDetails])
     return (
+        <HelmetProvider>
         <ThemeProvider theme={darkTheme}>
-            <CssBaseline />
+                <CssBaseline />
+                <Helmet>
+                    <title>eliph | Elliot Phua</title>
+                    <meta name="description" content="Elliot Phua's Portfolio Site"/>
+                </Helmet>
             <div className="flex flex-col justify-center w-full h-fit">
                 <TitleCard />
                 
@@ -52,6 +58,7 @@ export default function App() {
                 </div>
                 {/*  */}
             </div>
-        </ThemeProvider>
+            </ThemeProvider>
+        </HelmetProvider>
     )
 }
