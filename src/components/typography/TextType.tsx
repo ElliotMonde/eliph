@@ -5,6 +5,6 @@ export interface TypographyProp {
 
 export default function TextType({ text, theme }: TypographyProp) {
     return (
-        <p className={`${theme}`}>{text}</p>
+        <span className={theme}>{text}</span>
     )
 }

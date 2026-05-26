@@ -33,20 +33,23 @@ export default function JobCard({
         overflow: "hidden",
         alignSelf: "top",
         marginTop: "1%",
+        marginRight: "1%",
     }
     return (
         <Card elevation={isHover ? 1 : 0 } style={cardStyle} onMouseEnter={() => { setIsHover(true) }} onMouseLeave={() => { setIsHover(false)}}>
-            <Card style={logoStyle}>
-                <img className="aspect-1/1 object-cover w-full h-full drop-shadow-sm" src={logo} />
-            </Card>
-            <div className='flex flex-col ml-[2%] mr-[2%] w-[80%]'>
+            {logo && <Card style={logoStyle}>
+                <img className="aspect-square object-cover w-full h-full drop-shadow-sm" src={logo} />
+            </Card>}
+            <div className='flex flex-col w-[80%]'>
                 <TextType text={company} theme='h3' />
                 <TextType text={role} theme="caption" />
                 <TextType text={`${month[startDate.month]} ${startDate.year} - ${typeof endDate == "string" ? endDate : `${month[endDate.month]} ${endDate.year}`}`} theme="date" />
                 <TextType text={location} theme="date" />
+                {description && <div className='text-zinc-400 leading-0.5 mt-1'>
                 {description.map((txt, ind) =>
-                    <TextType key={company + ind} text={txt} theme="body" />
-                )}
+                    <TextType key={company + ind} text={txt} theme="date" />
+                    )}
+                </div>}
             </div>
         </Card>
     )

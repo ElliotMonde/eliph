@@ -47,7 +47,7 @@ export default function TitleCard() {
             </Card>
             {/* Name */}
             <div className="flex-col w-fit">
-                <TextType text="Elliot Phua" theme="header" />
+                <TextType text="Hi, I'm Elliot!" theme="header" />
                 {/* Socials */}
                 <div className="flex flex-row gap-3 max-sm:justify-center">
                     <Social link="https://www.linkedin.com/in/elliotphua/" icon=<LinkedInIcon /> />

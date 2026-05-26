@@ -7,6 +7,8 @@ import DarkModeButton from "./components/DarkModeButton"
 import { ThemeProvider, createTheme } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
 import { DarkModeContext } from "./provider/DarkProvider"
+import EducationSection from "./sections/Education"
+import ToTopButton from "./components/ToTopButton"
 
 export default function App() {
     const { isDark } = useContext(DarkModeContext);
@@ -31,13 +33,19 @@ export default function App() {
             <CssBaseline />
             <div className="flex flex-wrap justify-center w-full h-screen">
                 <TitleCard />
+                <div className="flex flex-1 flex-col min-container">
                 <WorkExp />
-                <div className="absolute z-0 bottom-[10%]">
+                    <EducationSection />
+                </div>
+                {/* Floating components */}
+                <div className="fixed z-0 bottom-[10%]">
                     <Alert />
                 </div>
-                <div className="absolute z-0 bottom-[5%] right-[3%]">
+                <div className="flex flex-col fixed z-0 bottom-[5%] right-[3%] gap-3">
+                    <ToTopButton/>
                     <DarkModeButton />
                 </div>
+                {/*  */}
             </div>
         </ThemeProvider>
     )

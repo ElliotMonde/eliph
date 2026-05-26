@@ -33,7 +33,7 @@ export default function Alert() {
     const IconComponent = alertDetails.icon;
     
     const alertStyle: React.CSSProperties = {
-        transition: "opacity 0.5s ease-in-out",
+        transition: "opacity 0.8s ease-in-out",
         opacity: visible ? 1 : 0,
         padding: 1,
         borderRadius: 2,
