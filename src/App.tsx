@@ -33,10 +33,15 @@ export default function App() {
             <CssBaseline />
             <div className="flex flex-col justify-center w-full h-fit">
                 <TitleCard />
-                <div className="p-12">
-                    <WorkExp />
-                    <EducationSection />
+                
+                <div className="flex flex-row flex-wrap">
+                    <div className="flex-1 min-container" />
+                    <div className="flex-2 min-container max-sm:pl-12">
+                        <WorkExp />
+                        <EducationSection />
+                    </div>
                 </div>
+               
                 {/* Floating components */}
                 <div className="fixed z-0 bottom-[10%]">
                     <Alert />
