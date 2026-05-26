@@ -5,15 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node prerender.js",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@prerenderer/prerenderer": "^1.2.5",
+    "@prerenderer/renderer-puppeteer": "^1.2.4",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "typescript": "~6.0.2",
-    "vite": "^8.0.12",
-    "vite-plugin-prerender": "^1.0.8"
+    "vite": "^8.0.12"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
