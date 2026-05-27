@@ -1,10 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { navTab, type NavTabProp } from "../data/navTab";
 import ToTopButton from "./ToTopButton";
 import DarkModeButton from "./DarkModeButton";
 
 export default function NavBar() {
-    const navRef = useRef<HTMLDivElement>(null);
     const [currentSection, setCurrentSection] = useState(navTab[0].target)
     const scrollToTab = (target: string) => {
         document.getElementById(target).scrollIntoView({
@@ -42,7 +41,7 @@ export default function NavBar() {
         return () => observer.disconnect();
     }, []);
 
-    return (<div ref={navRef} className={`caption flex flex-row max-md:justify-center gap-6 py-2 max-md:mx-0 mx-4 w-full`} >
+    return (<div className={`caption flex flex-row max-md:justify-center gap-6 py-2 max-md:mx-0 mx-4 w-full`} >
         {navTab.map((t: NavTabProp, ind: number) => tab(t, ind))}
         <div className="absolute right-5 flex flex-row gap-2 max-sm:hidden">
             <ToTopButton />
