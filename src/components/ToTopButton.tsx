@@ -8,6 +8,6 @@ export default function ToTopButton() {
         });
     }
     return (
-        <button className="scale-[1.3] cursor-pointer" onClick={toTop}><KeyboardCapslockIcon/></button>
+        <button className="scale-[1.3] cursor-pointer" onClick={toTop} aria-description='Scroll to top button'><KeyboardCapslockIcon/></button>
     )
 }

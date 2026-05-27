@@ -19,7 +19,7 @@ const photoStyle: React.CSSProperties = {
 
 const email: string = "elliotphua@gmail.com";
 const introduction: string[] = [
-    `Hi, my name is Elliot Phua. I'm a Software Engineer at Visa, specializing in building functional and highly-scalable systems. My background in Arts, Design and Technology has taught me to approach challenges with an engineering precision and a designer's eye.`,
+    `Hi, my name is Elliot Phua. I'm a Software Engineer at Visa, specializing in building functional and highly-scalable systems. My background in Arts, Design and Technology has taught me to approach challenges with systematic thinking and a designer's eye.`,
     `I enjoy tinkering, solving challenges and creating positive impacts in the world. This is my journey so far and I am always learning and growing.`,
     `Thanks for checking out my website! :)`]
 interface SocialProp {
@@ -28,7 +28,7 @@ interface SocialProp {
 }
 function Social({ link, icon }: SocialProp) {
     return (
-        <div className="hover:border-b-3 transition-all duration-150 ease-in pb-1">
+        <div className="border-b-3 border-transparent hover:border-inherit transition-colors duration-350 ease-in-out pb-1">
             <a target="_blank" href={link}>
                 {icon}
             </a>
@@ -46,7 +46,7 @@ export default function TitleCard() {
     return (
         <div className={`flex flex-1 flex-row flex-wrap items-center pt-[5%] w-full mb-5`}>
             {/* Profile photo */}
-            <div className="flex flex-3 justify-center min-container">
+            <div className="flex flex-3 justify-center min-container" aria-description='Picture of Elliot Phua'>
                 <Card sx={photoStyle}>
                     <img className="w-full h-full object-cover" src="/Elliot.png" alt="Elliot Phua" />
                 </Card>
@@ -56,9 +56,9 @@ export default function TitleCard() {
                 <div className="max-sm:self-center"><TextType text="Hi, I'm Elliot!" theme="header" /></div>
                 {/* Socials */}
                 <div className="flex flex-row gap-3 mt-2 max-sm:justify-center">
-                    <Social link="https://www.linkedin.com/in/elliotphua/" icon=<LinkedInIcon /> />
-                    <Social link="https://github.com/ElliotMonde" icon=<GitHubIcon /> />
-                    <div onClick={copyEmail}><Social link={`mailto:${email}`} icon=<EmailIcon /> /></div>
+                    <Social aria-description="Redirect to Elliot's Linkedin" link="https://www.linkedin.com/in/elliotphua/" icon=<LinkedInIcon /> />
+                    <Social aria-description="Redirect to Elliot's GitHub" link="https://github.com/ElliotMonde" icon=<GitHubIcon /> />
+                    <div onClick={copyEmail}><Social aria-description="Send email to Elliot or copy email address" link={`mailto:${email}`} icon=<EmailIcon /> /></div>
                 </div>
                 <div className="max-w-[80%] mt-5 max-sm:self-center">
                     {introduction.map((s) => <span className="body">{s}<br/><br/></span>)}
