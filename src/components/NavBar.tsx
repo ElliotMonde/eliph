@@ -6,7 +6,8 @@ import DarkModeButton from "./DarkModeButton";
 export default function NavBar() {
     const [currentSection, setCurrentSection] = useState(navTab[0].target)
     const scrollToTab = (target: string) => {
-        document.getElementById(target).scrollIntoView({
+        const element = document.getElementById(target)
+        if (element) element.scrollIntoView({
             behavior: "smooth",
             block: "start",
             inline: "nearest"
