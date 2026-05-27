@@ -1,11 +1,11 @@
 import Card from "@mui/material/Card";
-import TextType from "./typography/TextType";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import CheckIcon from '@mui/icons-material/Check';
 import { useContext } from "react";
 import { AlertContext } from "../provider/AlertProvider";
+import ChangingText from "./animation/ChangingText";
 
 const photoStyle: React.CSSProperties = {
     background: "none",
@@ -18,10 +18,7 @@ const photoStyle: React.CSSProperties = {
 }
 
 const email: string = "elliotphua@gmail.com";
-const introduction: string[] = [
-    `Hi, my name is Elliot Phua. I'm a Software Engineer at Visa, specializing in building functional and highly-scalable systems. My background in Arts, Design and Technology has taught me to approach challenges with systematic thinking and a designer's eye.`,
-    `I enjoy tinkering, solving challenges and creating positive impacts in the world. This is my journey so far and I am always learning and growing.`,
-    `Thanks for checking out my website! :)`]
+
 interface SocialProp {
     link: string;
     icon: React.ReactNode;
@@ -52,8 +49,8 @@ export default function TitleCard() {
                 </Card>
             </div>
             {/* Name */}
-            <div className="flex flex-5 flex-col w-fit min-container max-sm:justify-center ml-5 mr-5 text-balance">
-                <div className="max-sm:self-center"><TextType text="Hi, I'm Elliot!" theme="header" /></div>
+            <div className="flex flex-5 flex-col w-full min-container max-sm:justify-center ml-5 mr-5 text-balance">
+                <div className="max-sm:self-center">{ <ChangingText/> }</div>
                 {/* Socials */}
                 <div className="flex flex-row gap-3 mt-2 max-sm:justify-center">
                     <Social aria-description="Redirect to Elliot's Linkedin" link="https://www.linkedin.com/in/elliotphua/" icon=<LinkedInIcon /> />
@@ -61,7 +58,13 @@ export default function TitleCard() {
                     <div onClick={copyEmail}><Social aria-description="Send email to Elliot or copy email address" link={`mailto:${email}`} icon=<EmailIcon /> /></div>
                 </div>
                 <div className="max-w-[80%] mt-5 max-sm:self-center">
-                    {introduction.map((s) => <span className="body">{s}<br/><br/></span>)}
+                    <span className="body">
+                        Hi, my name is <b>Elliot Phua</b>. I'm a Software Engineer at <a target="_blank" href="https://www.visa.com/" className="decoration-dotted underline">Visa</a>, specializing in building functional and highly-scalable systems. My background in Arts, Design and Technology has taught me to approach challenges with systematic thinking and a designer's eye.
+                        <br /><br />
+                        I enjoy tinkering, solving challenges and creating positive impacts in the world. This is my journey so far and I am always learning and growing.
+                        <br /><br />
+                        Thanks for checking out my website! :)
+                    </span>
                 </div>
             </div>
         </div>)
