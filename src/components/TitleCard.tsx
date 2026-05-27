@@ -6,6 +6,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import { useContext } from "react";
 import { AlertContext } from "../provider/AlertProvider";
 import ChangingText from "./animation/ChangingText";
+import { aboutTab } from "../data/navTab";
 
 const photoStyle: React.CSSProperties = {
     background: "none",
@@ -41,7 +42,7 @@ export default function TitleCard() {
     }
 
     return (
-        <div className={`flex flex-1 flex-row flex-wrap items-center pt-[5%] w-full mb-5`}>
+        <div id={ aboutTab.target} className={`flex flex-1 flex-row flex-wrap items-center pt-[5%] w-full mb-5`}>
             {/* Profile photo */}
             <div className="flex flex-3 justify-center min-container" aria-description='Picture of Elliot Phua'>
                 <Card sx={photoStyle}>

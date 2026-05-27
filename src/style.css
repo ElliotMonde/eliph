@@ -8,9 +8,10 @@ html {
 }
 
 :root {
-  --text: #000000;
-  --text-h: #000000;
-  --bg: #fff;
+  --text: #451e51;
+  --text-dark-mode: #fffae8;
+  --bg: #fffae8;
+  --dark-bg: #171000;
   --code-bg: #451e51;
   --code-text: #80e6da;
 
@@ -39,12 +40,20 @@ body {
 .subheader {
   font: 1.6rem var(--serif);
   font-weight: 400;
+
+  .light {
+    color: var(--text);
+  }
+
+  .dark {
+    color: var(--text-dark-mode);
+  }
 }
 
 .h3 {
   font: 1.3rem var(--serif);
   font-weight: 400;
-  
+
 }
 
 .caption {
@@ -56,12 +65,21 @@ body {
 .body {
   font: 1rem var(--san);
   font-weight: 300;
+
+  .light {
+    color: var(--text);
+  }
+
+  .dark {
+    color: var(--text-dark-mode);
+  }
 }
 
 .date {
   font: 0.8rem var(--san);
   font-weight: 0.8rem;
   font-style: italic;
+  opacity: 0.7;
 }
 
 .min-container {

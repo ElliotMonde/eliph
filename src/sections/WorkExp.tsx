@@ -3,10 +3,11 @@ import TextType from "../components/typography/TextType"
 import JobCard from "../components/JobCard"
 import { workExperience } from "../data/experience"
 import Section from "./Section"
+import { workTab } from "../data/navTab"
 
-export default function WorkExp() {
+export default function WorkExpSection() {
     return (
-        <Section>
+        <Section id={workTab.target}>
             <TextType text="Work Experience" theme={"subheader"} />
             <div id="workTimeline">
                 {workExperience.map((exp, ind) => (

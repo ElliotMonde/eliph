@@ -45,7 +45,7 @@ export default function JobCard({
                 <TextType text={role} theme="caption" />
                 <TextType text={`${month[startDate.month]} ${startDate.year} - ${typeof endDate == "string" ? endDate : `${month[endDate.month]} ${endDate.year}`}`} theme="date" />
                 <TextType text={location} theme="date" />
-                {description && <div className='text-zinc-400 leading-0.5 mt-1'>
+                {description && <div className='color:secondary leading-0.5 mt-1'>
                 {description.map((txt, ind) =>
                     <TextType key={company + ind} text={txt} theme="date" />
                     )}

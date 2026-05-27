@@ -37,6 +37,7 @@ export default function Alert() {
         opacity: visible ? 1 : 0,
         padding: 1,
         borderRadius: 2,
+        backgroundColor: 'background.default',
     };
 
     return (
