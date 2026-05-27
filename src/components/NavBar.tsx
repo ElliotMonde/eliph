@@ -21,7 +21,7 @@ export default function NavBar() {
     useEffect(() => {
         const observerOptions = {
             root: null,
-            rootMargin: "-20% 0px -60% 0px",
+            rootMargin: "-20% 0px -50% 0px",
             threshold: 0.2,
         }
 

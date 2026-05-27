@@ -51,7 +51,7 @@ export default function App() {
                 <div className="flex flex-col justify-center w-full h-fit pb-7">
                     <TitleCard />
                     <div className="flex flex-row flex-wrap bg-inherit">
-                        <div className="flex-1 min-container bg-inherit" >
+                        <div className="flex-1 min-container" >
                         </div>
                         <div className="flex-2 min-container max-sm:pl-12">
                             <WorkExpSection />
