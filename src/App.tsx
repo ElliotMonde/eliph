@@ -1,17 +1,15 @@
 import { useContext, useEffect } from "react"
 import TitleCard from "./components/TitleCard"
-import WorkExpSection from "./sections/WorkExp"
 import Alert from "./components/Alert"
 import { AlertContext } from "./provider/AlertProvider"
 import DarkModeButton from "./components/DarkModeButton"
 import { ThemeProvider, createTheme } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
 import { DarkModeContext } from "./provider/DarkProvider"
-import EducationSection from "./sections/Education"
 import ToTopButton from "./components/ToTopButton"
 import { Helmet, HelmetProvider } from "react-helmet-async"
 import NavBar from "./components/NavBar"
-import ProjectSection from "./sections/Project"
+import MainBody from "./sections/MainBody"
 
 export default function App() {
     const { isDark } = useContext(DarkModeContext);
@@ -50,26 +48,18 @@ export default function App() {
                 {/* Hero */}
                 <div className="flex flex-col justify-center w-full h-fit pb-7">
                     <TitleCard />
-                    <div className="flex flex-row flex-wrap bg-inherit">
-                        <div className="flex-1 min-container" >
-                        </div>
-                        <div className="flex-2 min-container max-sm:pl-12">
-                            <WorkExpSection />
-                            <EducationSection />
-                            <ProjectSection />
-                        </div>
-                    </div>
+                    <MainBody/>
                     {/* Floating components */}
                     <div className="fixed z-1 bottom-[10%] self-center">
                         <Alert />
                     </div>
-                    <div className="flex flex-col fixed z-1 bottom-[6%] right-[3%] gap-3 sm:hidden">
+                    <div className="flex flex-col fixed z-99 bottom-[6%] right-[3%] gap-3 sm:hidden">
                         <ToTopButton />
                         <DarkModeButton />
                     </div>
                     {/*  */}
                 </div>
-                <div className="fixed bottom-0 z-1 w-full dark:bg-(--dark-bg) bg-(--bg) border-t-[0.1px]">
+                <div className="fixed bottom-0 z-99 w-full border-t-[0.1px] bg-default">
                     <NavBar />
                 </div>
             </ThemeProvider>

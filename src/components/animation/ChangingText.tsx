@@ -9,7 +9,7 @@ export default function ChangingText() {
     const activeTlRef = useRef<gsap.core.Timeline | null>(null);
     const [isAnimating, setIsAnimating] = useState<boolean>(false);
     const name = "Elliot!";
-    const occupations = ["a Software Engineer!", "an Artist!", "a Designer!", "an Explorer!", "Elliot!"];
+    const occupations = ["a SWE!", "an Artist!", "a Designer!", "an Explorer!", "Elliot!"];
 
     const triggerAnimation = (roles: string[]) => {
 

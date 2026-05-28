@@ -3,10 +3,15 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import CheckIcon from '@mui/icons-material/Check';
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { AlertContext } from "../provider/AlertProvider";
 import ChangingText from "./animation/ChangingText";
 import { aboutTab } from "../data/navTab";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollObserver } from "../sections/Section";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const photoStyle: React.CSSProperties = {
     background: "none",
@@ -36,13 +41,18 @@ function Social({ link, icon }: SocialProp) {
 
 export default function TitleCard() {
     const { setAlertDetails } = useContext(AlertContext);
+    const titleRef = useRef<HTMLDivElement | null>(null);
     const copyEmail = () => {
         navigator.clipboard.writeText(email)
         setAlertDetails({ icon: CheckIcon, text: "Successfully copied email. ", isAlert: true, opacity: 100 })
     }
 
+    useEffect(() => { 
+        ScrollObserver(titleRef);
+    },[titleRef.current])
+
     return (
-        <div id={ aboutTab.target} className={`flex flex-1 flex-row flex-wrap items-center pt-[5%] w-full mb-5`}>
+        <div ref={ titleRef} id={ aboutTab.target} className={`flex flex-1 flex-row flex-wrap items-center justify-center w-full min-h-screen`}>
             {/* Profile photo */}
             <div className="flex flex-3 justify-center min-container" aria-description='Picture of Elliot Phua'>
                 <Card sx={photoStyle}>
