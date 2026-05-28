@@ -38,7 +38,7 @@ export default function JobCard({
     return (
         <Card elevation={isHover ? 1 : 0 } style={cardStyle} onMouseEnter={() => { setIsHover(true) }} onMouseLeave={() => { setIsHover(false)}}>
             {logo && <Card style={logoStyle}>
-                <img className="aspect-square object-cover w-full h-full drop-shadow-sm" src={logo} />
+                <img className="aspect-square object-cover w-full h-full drop-shadow-sm" src={logo} alt={`Logo of ${company}`} />
             </Card>}
             <div className='flex flex-col w-[80%]'>
                 <TextType text={company} theme='h3' />
