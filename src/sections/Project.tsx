@@ -4,9 +4,10 @@ import Section from "./Section";
 import SectionTitle from "./SectionTitle";
 
 export default function ProjectSection() {
+    const projectCardClass = "project-card";
     return (
-        <Section id={projectsTab.target}>
-            <SectionTitle text={ "Projects" } />
+        <Section id={projectsTab.target} childrenClass={projectCardClass}>
+            <SectionTitle text={"Projects"} />
             <div className="flex sm:justify-center mt-10">
                 <TextType theme="body" text="Check back again soon! 👀" />
             </div>

@@ -1,5 +1,5 @@
 import WorkExpSection from "./WorkExp"
-import EducationSection from "./Education"
+import EducationSection from "./EducationSection"
 import ProjectSection from "./Project"
 
 export default function MainBody() {

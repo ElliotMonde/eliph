@@ -2,6 +2,7 @@ import { useEffect, useRef, type RefObject } from "react";
 
 interface SectionProp {
     id: string;
+    childrenClass: string;
     children: React.ReactNode;
 }
 import gsap from "gsap";
@@ -9,7 +10,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-export const ScrollObserver = (sectionRef: RefObject<HTMLDivElement | null>) => {
+export const ScrollObserver = (sectionRef: RefObject<HTMLDivElement | null>, childrenClass?: string, id?: string, titleId?: string) => {
     if (!sectionRef.current) return;
 
     const observerOptions = {
@@ -20,6 +21,22 @@ export const ScrollObserver = (sectionRef: RefObject<HTMLDivElement | null>) => 
 
     let isScrolling = false;
 
+
+    const targets = sectionRef.current.querySelectorAll(`.${childrenClass}`);
+    if (targets && id) {
+        gsap.to(targets, {
+            delay: 0.3,
+            y: 10,
+            duration: 0.3,
+            yoyo: true,
+            stagger: 0.05,
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 60%",
+                toggleActions: "restart restart restart restart",
+            },
+        });
+    };
 
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry) => {
@@ -47,12 +64,12 @@ export const ScrollObserver = (sectionRef: RefObject<HTMLDivElement | null>) => 
 
     return () => observer.disconnect();
 }
-export default function Section({ id, children }: SectionProp) {
+export default function Section({ id, childrenClass, children }: SectionProp) {
     const sectionRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
 
-        ScrollObserver(sectionRef);
+        ScrollObserver(sectionRef, childrenClass, id);
     }, [id]);
 
     return (
