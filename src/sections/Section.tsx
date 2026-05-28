@@ -1,4 +1,4 @@
-import { useEffect, useRef, type Ref, type RefObject } from "react";
+import { useEffect, useRef, type RefObject } from "react";
 
 interface SectionProp {
     id: string;
@@ -31,8 +31,8 @@ export const ScrollObserver = (sectionRef: RefObject<HTMLDivElement | null>) => 
 
                 gsap.to(window, {
                     scrollTo: { y: elementTop },
-                    duration: 0.6,
-                    ease: "ease.inOut(0.5)",
+                    duration: 1,
+                    ease: "back.out(0.3)",
                     overwrite: "auto",
                     onComplete: () => {
                         isScrolling = false;
