@@ -10,7 +10,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-export const ScrollObserver = (sectionRef: RefObject<HTMLDivElement | null>, childrenClass?: string, id?: string, titleId?: string) => {
+export const ScrollObserver = (sectionRef: RefObject<HTMLDivElement | null>, childrenClass?: string, id?: string) => {
     if (!sectionRef.current) return;
 
     const observerOptions = {
