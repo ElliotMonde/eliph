@@ -5,9 +5,6 @@ export default function ProjectCard({
     name,
     mediaUrl,
     subtitle,
-    link,
-    date,
-    description,
 }: ProjectProps) {
     return (
         <div
