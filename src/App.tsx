@@ -43,7 +43,7 @@ export default function App() {
                 <CssBaseline />
                 {/* seo */}
                 <Helmet>
-                    <title>eliph | Elliot Phua</title>
+                    <title>Elliot Phua</title>
                     <meta name="description" content="Elliot Phua's Portfolio Site" />
                 </Helmet>
                 {/* Hero */}
