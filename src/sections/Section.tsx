@@ -73,6 +73,6 @@ export default function Section({ id, childrenClass, children }: SectionProp) {
     }, [id]);
 
     return (
-        <div ref={sectionRef} id={id} className="pl-[5%] pr-[5%] pt-[5%] flex-1 min-h-screen">{children}</div>
+        <div ref={sectionRef} id={id} className="pl-[5%] pr-[5%] flex-1 min-h-screen">{children}</div>
     )
 }

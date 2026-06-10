@@ -1,4 +1,4 @@
-export enum month { 
+export enum month {
     "",
     "Jan",
     "Feb",
@@ -14,7 +14,7 @@ export enum month {
     "Dec"
 }
 
-export interface FormattedDate { 
+export interface FormattedDate {
     month: month;
     year: number;
 }
@@ -27,7 +27,7 @@ export interface Experience {
     location: string;
     description: string[];
     logo: string;
- }
+}
 
 export const workExperience: Experience[] = [
     {
@@ -107,7 +107,7 @@ export const workExperience: Experience[] = [
 export const educationExperience: Experience[] = [
     {
         company: "Singapore University of Technology and Design (SUTD)",
-        role: "Bachelor of Engineering in Computer Science (Hons)" ,
+        role: "Bachelor of Engineering in Computer Science (Hons)",
         startDate: {
             month: 9,
             year: 2022,
@@ -194,5 +194,170 @@ export const educationExperience: Experience[] = [
         location: "Singapore",
         description: [""],
         logo: "",
+    },
+]
+
+export interface ProjectProps {
+    name: string;
+    mediaUrl: string;
+    subtitle?: string;
+    link?: string;
+    date: FormattedDate;
+    description: string[];
+}
+
+export const projects: ProjectProps[] = [
+    {
+        name: "PoliSense AI",
+        subtitle: "Fine-tuned LLM Political Bias Detection In News Article",
+        mediaUrl: "project-polisense.png",
+        link: "https://github.com/ElliotMonde/PoliSense",
+        date: {
+            month: 9,
+            year: 2025,
+        },
+        description: [""],
+    },
+    {
+        name: "AI MRI Segmentation",
+        mediaUrl: "project-biobot.png",
+        subtitle: "AI Segmentation Tool For Prostate MRI",
+        link: "https://github.com/ElliotMonde/ProSeg_GUI",
+        date: {
+            month: 9,
+            year: 2025
+        },
+        description: [""],
+    },
+    {
+        name: "Bulkify",
+        mediaUrl: "project-bulkify-2.jpeg",
+        subtitle: "Group-Buy E-commerce App",
+        link: "",
+        date: {
+            month: 1,
+            year: 2024
+        },
+        description: [""],
+    }, {
+        name: "Transit House",
+        mediaUrl: "project-transithouse.jpeg",
+        subtitle: "Architecture Project: Exploration Of Public & Private Spaces",
+        link: "",
+        date: {
+            month: 1,
+            year: 2021
+        },
+        description: [""],
+    },
+    {
+        name: "Lilypad Project",
+        mediaUrl: "project-lilypad.jpeg",
+        subtitle: "Programmable Light Installation",
+        link: "",
+        date: {
+            month: 1,
+            year: 2023
+        },
+        description: [""],
+    },
+    {
+        name: "Vega & Altair",
+        mediaUrl: "project-vegaaltair.jpeg",
+        subtitle: "Web Game About Star-Crossed Lovers Using Javascript",
+        link: "",
+        date: {
+            month: 6,
+            year: 2023
+        },
+        description: [""],
+    },
+    {
+        name: "Holographic Projector",
+        mediaUrl: "project-holographic.jpeg",
+        subtitle: "Holographic Projector & 3D Model Viewer App For SUTD Night Fiesta 2024",
+        link: "",
+        date: {
+            month: 1,
+            year: 202
+        },
+        description: [""],
+    },
+    {
+        name: "GuardAIn",
+        mediaUrl: "project-guardain.jpeg",
+        subtitle: "Gen-AI Health Companion For Accenture University Innovation Challenge",
+        link: "",
+        date: {
+            month: 12,
+            year: 2023
+        },
+        description: [""],
+    },
+    {
+        name: "Eternal Sunshine",
+        mediaUrl: "project-eternalsunshine.jpeg",
+        subtitle: "Computational Design For NUS Architecture Design Studio 1",
+        link: "",
+        date: {
+            month: 10,
+            year: 2020
+        },
+        description: [""],
+    },
+    {
+        name: "Assistive Painting Device | Tech4Good & MDAS",
+        mediaUrl: "project-t4g.jpeg",
+        subtitle: "Art Tool For People With Muscular Dystrophy",
+        link: "",
+        date: {
+            month: 6,
+            year: 2023
+        },
+        description: [""],
+    },
+    {
+        name: "EnableID",
+        mediaUrl: "project-enableid.png",
+        subtitle: "",
+        link: "",
+        date: {
+            month: 5,
+            year: 2024
+        },
+        description: [""],
+    },
+    {
+        name: "Toke UX Design",
+        mediaUrl: "project-toke.jpeg",
+        subtitle: "",
+        link: "",
+        date: {
+            month: 10,
+            year: 2021
+        },
+        description: [""],
+    },
+    {
+        name: "Async Distributed OCR Processing Pipeline",
+        mediaUrl: "project-async.png",
+        subtitle: "",
+        link: "",
+        date: {
+            month: 2,
+            year: 2026
+        },
+        description: [""],
+    },
+    {
+        name: "FlushFlow IoT",
+        mediaUrl: "project-flushflow.jpg",
+        subtitle: "Real-time Facilities Analytics and Restroom Occupancy Display",
+        link: "",
+        date: {
+            month: 9,
+            year: 2025
+        },
+        description: [""],
     },
 ]

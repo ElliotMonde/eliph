@@ -22,13 +22,15 @@ export default function NavBar() {
         setCurrentSection(target);
     }
     const tab = ({ name, target }: NavTabProp, ind: number) => (
-        <span key={`${target}-${ind}`} onClick={() => scrollToTab(target)} className={`${currentSection == target ? "font-black" : ""}`}>{name}</span>
+        <span key={`${target}-${ind}`} onClick={() => scrollToTab(target)} className={`
+            ${currentSection == target ? "font-black" : ""}
+            cursor-pointer hover-underline`}>{name}</span>
     );
 
     useEffect(() => {
         const observerOptions = {
             root: null,
-            rootMargin: "-20% 0px -50% 0px",
+            rootMargin: "-20% 0px -80% 0px",
             threshold: 0.2,
         }
 

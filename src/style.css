@@ -58,7 +58,6 @@ body {
 .caption {
   font: 1rem var(--san);
   font-weight: 300;
-  font-style: italic;
 }
 
 .body {
@@ -72,6 +71,10 @@ body {
   .dark {
     color: var(--text-dark-mode);
   }
+}
+
+.text-light {
+  color: var(--text-dark-mode);
 }
 
 .date {
@@ -92,4 +95,10 @@ body {
 
 .dark .bg-default {
   background-color: var(--dark-bg);
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.3rem;
 }

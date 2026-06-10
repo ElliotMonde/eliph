@@ -10,6 +10,7 @@ import ToTopButton from "./components/ToTopButton"
 import { Helmet, HelmetProvider } from "react-helmet-async"
 import NavBar from "./components/NavBar"
 import MainBody from "./sections/MainBody"
+import FooterSection from "./sections/FooterSection"
 
 export default function App() {
     const { isDark } = useContext(DarkModeContext);
@@ -57,7 +58,8 @@ export default function App() {
                         <ToTopButton />
                         <DarkModeButton />
                     </div>
-                    {/*  */}
+                    <FooterSection/>
+                    {/*  Nav bar */}
                 </div>
                 <div className="fixed bottom-0 z-99 w-full border-t-[0.1px] bg-default">
                     <NavBar />

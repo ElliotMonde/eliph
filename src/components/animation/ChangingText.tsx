@@ -63,7 +63,7 @@ export default function ChangingText() {
     return (
         <span className="header">
             Hi, I'm{" "}
-            <span className={`header transition-all duration-300 ${isAnimating ? " text-indigo-400" : "text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-indigo-500 hover:brightness-125"}`} onMouseEnter={() => {
+            <span className={`header cursor-crosshair transition-all duration-300 ${isAnimating ? " text-indigo-400" : "text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-indigo-500 hover:brightness-125"}`} onMouseEnter={() => {
                 if (isAnimating) return;
                 triggerAnimation(occupations);
             }}>
