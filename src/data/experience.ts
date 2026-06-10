@@ -210,7 +210,7 @@ export const projects: ProjectProps[] = [
     {
         name: "PoliSense AI",
         subtitle: "Fine-tuned LLM Political Bias Detection In News Article",
-        mediaUrl: "project-polisense.png",
+        mediaUrl: "project-polisense.webp",
         link: "https://github.com/ElliotMonde/PoliSense",
         date: {
             month: 9,
