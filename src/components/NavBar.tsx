@@ -34,7 +34,7 @@ export default function NavBar() {
         const observerOptions = {
             root: null,
             rootMargin: "-20% 0px -50% 0px",
-            threshold: 0.2,
+            threshold: 0,
         }
 
         const handleIntersection = (entries: IntersectionObserverEntry[]) => {
