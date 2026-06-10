@@ -6,7 +6,7 @@ export default function MainBody() {
 
     return (
         <div className="flex flex-row flex-wrap bg-inherit">
-            <div className="flex-2 min-container">
+            <div className="flex-2 min-container gap-1">
                 <WorkExpSection />
                 <EducationSection />
                 <ProjectSection />

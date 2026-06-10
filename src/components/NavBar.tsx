@@ -4,7 +4,7 @@ import ToTopButton from "./ToTopButton";
 import DarkModeButton from "./DarkModeButton";
 
 export default function NavBar() {
-    const [currentSection, setCurrentSection] = useState(navTab[0].target)
+    const [currentSection, setCurrentSection] = useState(navTab[0].target);
     const scrollToTab = (target: string) => {
         (window as any).isAutoScrollingToTop = true;
         const element = document.getElementById(target);
@@ -13,12 +13,15 @@ export default function NavBar() {
             block: "start",
             inline: "nearest"
         });
+
+        let lastScrollY = window.scrollY;
+
         const checkArrival = setInterval(() => {
-            if (window.scrollY === 0) {
+            if (window.scrollY === lastScrollY) {
                 (window as any).isAutoScrollingToTop = false;
                 clearInterval(checkArrival);
             }
-        }, 100);
+        }, 50);
         setCurrentSection(target);
     }
     const tab = ({ name, target }: NavTabProp, ind: number) => (
@@ -30,12 +33,13 @@ export default function NavBar() {
     useEffect(() => {
         const observerOptions = {
             root: null,
-            rootMargin: "-20% 0px -80% 0px",
+            rootMargin: "-20% 0px -50% 0px",
             threshold: 0.2,
         }
 
         const handleIntersection = (entries: IntersectionObserverEntry[]) => {
             entries.forEach((entry) => {
+                if ((window as any).isAutoScrollingToTop) return;
                 if (entry.isIntersecting) {
                     setCurrentSection(entry.target.id);
                 }
