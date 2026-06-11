@@ -220,7 +220,7 @@ export const projects: ProjectProps[] = [
     },
     {
         name: "AI MRI Segmentation",
-        mediaUrl: "project-biobot.png",
+        mediaUrl: "project-biobot.webp",
         subtitle: "AI Segmentation Tool For Prostate MRI",
         link: "https://github.com/ElliotMonde/ProSeg_GUI",
         date: {
@@ -241,7 +241,7 @@ export const projects: ProjectProps[] = [
         description: [""],
     }, {
         name: "Transit House",
-        mediaUrl: "project-transithouse.jpeg",
+        mediaUrl: "project-transithouse.webp",
         subtitle: "Architecture Project: Exploration Of Public & Private Spaces",
         link: "",
         date: {
@@ -318,7 +318,7 @@ export const projects: ProjectProps[] = [
     },
     {
         name: "EnableID",
-        mediaUrl: "project-enableid.png",
+        mediaUrl: "project-enableid.webp",
         subtitle: "",
         link: "",
         date: {

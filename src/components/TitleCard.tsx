@@ -32,7 +32,7 @@ interface SocialProp {
 function Social({ link, icon }: SocialProp) {
     return (
         <div className="border-b-3 border-transparent hover:border-inherit transition-colors duration-350 ease-in-out pb-1">
-            <a target="_blank" href={link}>
+            <a target="_blank" href={link} aria-label="social-media-label">
                 {icon}
             </a>
         </div>
@@ -56,7 +56,7 @@ export default function TitleCard() {
             {/* Profile photo */}
             <div className="flex flex-3 justify-center min-container" aria-description='Picture of Elliot Phua'>
                 <Card sx={photoStyle}>
-                    <img className="w-full h-full object-cover" src="/Elliot.png" alt="Elliot Phua" />
+                    <img className="w-full h-full object-cover" src="/Elliot.webp" alt="Elliot Phua" />
                 </Card>
             </div>
             {/* Name */}
