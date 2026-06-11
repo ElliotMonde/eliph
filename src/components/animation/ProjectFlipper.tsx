@@ -19,7 +19,7 @@ export default function ProjectFlipper() {
     return (
         <div className="flex flex-col justify-around gap-3">
             {projects.map((_, count) =>
-                <ProjectCard {...projects[count]} />)
+                <ProjectCard key={ `${count}`} {...projects[count]} />)
             }
         </div>
     )

@@ -3,11 +3,6 @@ import { workExperience } from "../data/experience"
 import Section from "./Section"
 import { workTab } from "../data/navTab"
 import SectionTitle from "./SectionTitle"
-import gsap from "gsap"
-import ScrollTrigger from "gsap/ScrollTrigger"
-
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function WorkExpSection() {
     const workCardClass = "work-card";
