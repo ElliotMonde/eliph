@@ -55,7 +55,7 @@ export const workExperience: Experience[] = [
         },
         location: "Singapore",
         description: [""],
-        logo: "/fcc_logo.svg",
+        logo: "/fcc_logo.webp",
     },
     {
         company: "Knovel Engineering",
@@ -70,7 +70,7 @@ export const workExperience: Experience[] = [
         },
         location: "Singapore",
         description: [""],
-        logo: "/knovel_logo.svg",
+        logo: "/knovel_logo.webp",
     },
     {
         company: "Activate Interactive",
@@ -100,7 +100,7 @@ export const workExperience: Experience[] = [
         },
         location: "Singapore",
         description: [""],
-        logo: "/htx_logo.svg",
+        logo: "/htx_logo.webp",
     },
 ]
 
@@ -231,7 +231,7 @@ export const projects: ProjectProps[] = [
     },
     {
         name: "Bulkify",
-        mediaUrl: "project-bulkify-2.jpeg",
+        mediaUrl: "project-bulkify-2.webp",
         subtitle: "Group-Buy E-commerce App",
         link: "",
         date: {
@@ -252,7 +252,7 @@ export const projects: ProjectProps[] = [
     },
     {
         name: "Lilypad Project",
-        mediaUrl: "project-lilypad.jpeg",
+        mediaUrl: "project-lilypad.webp",
         subtitle: "Programmable Light Installation",
         link: "",
         date: {
@@ -263,7 +263,7 @@ export const projects: ProjectProps[] = [
     },
     {
         name: "Vega & Altair",
-        mediaUrl: "project-vegaaltair.jpeg",
+        mediaUrl: "project-vegaaltair.webp",
         subtitle: "Web Game About Star-Crossed Lovers Using Javascript",
         link: "",
         date: {
@@ -274,7 +274,7 @@ export const projects: ProjectProps[] = [
     },
     {
         name: "Holographic Projector",
-        mediaUrl: "project-holographic.jpeg",
+        mediaUrl: "project-holographic.webp",
         subtitle: "Holographic Projector & 3D Model Viewer App For SUTD Night Fiesta 2024",
         link: "",
         date: {
@@ -285,7 +285,7 @@ export const projects: ProjectProps[] = [
     },
     {
         name: "GuardAIn",
-        mediaUrl: "project-guardain.jpeg",
+        mediaUrl: "project-guardain.webp",
         subtitle: "Gen-AI Health Companion For Accenture University Innovation Challenge",
         link: "",
         date: {
@@ -296,7 +296,7 @@ export const projects: ProjectProps[] = [
     },
     {
         name: "Eternal Sunshine",
-        mediaUrl: "project-eternalsunshine.jpeg",
+        mediaUrl: "project-eternalsunshine.webp",
         subtitle: "Computational Design For NUS Architecture Design Studio 1",
         link: "",
         date: {
@@ -307,7 +307,7 @@ export const projects: ProjectProps[] = [
     },
     {
         name: "Assistive Painting Device | Tech4Good & MDAS",
-        mediaUrl: "project-t4g.jpeg",
+        mediaUrl: "project-t4g.webp",
         subtitle: "Art Tool For People With Muscular Dystrophy",
         link: "",
         date: {
@@ -329,7 +329,7 @@ export const projects: ProjectProps[] = [
     },
     {
         name: "Toke UX Design",
-        mediaUrl: "project-toke.jpeg",
+        mediaUrl: "project-toke.webp",
         subtitle: "",
         link: "",
         date: {
@@ -340,7 +340,7 @@ export const projects: ProjectProps[] = [
     },
     {
         name: "Async Distributed OCR Processing Pipeline",
-        mediaUrl: "project-async.png",
+        mediaUrl: "project-async.webp",
         subtitle: "",
         link: "",
         date: {
@@ -351,7 +351,7 @@ export const projects: ProjectProps[] = [
     },
     {
         name: "FlushFlow IoT",
-        mediaUrl: "project-flushflow.jpg",
+        mediaUrl: "project-flushflow.webp",
         subtitle: "Real-time Facilities Analytics and Restroom Occupancy Display",
         link: "",
         date: {
