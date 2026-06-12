@@ -7,6 +7,146 @@ html {
   min-height: screen;
 }
 
+/* --------- Font-Faces ------- */
+
+@font-face {
+  font-family: "Averia Serif Libre";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Averia Serif Libre Italic";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-Italic.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Averia Serif Libre Light";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-Light.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Averia Serif Libre Light Italic";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-LightItalic.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Averia Serif Libre Bold";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-Bold.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Averia Serif Libre Bold Italic";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-BoldItalic.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Averia Serif Libre";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Averia Serif Libre Italic";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-Italic.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Gothic A1 Thin";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('/fonts/Gothic_A1/GothicA1-Thin.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Gothic A1 Extra Light";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('/fonts/Gothic_A1/GothicA1-ExtraLight.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Gothic A1 Light";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/Gothic_A1/GothicA1-Light.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Gothic A1";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Gothic_A1/GothicA1-Regular.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Gothic A1 Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Gothic_A1/GothicA1-Medium.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Gothic A1 Semi Bold";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Gothic_A1/GothicA1-SemiBold.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Gothic A1 Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Gothic_A1/GothicA1-Bold.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Gothic A1 Extra Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/Gothic_A1/GothicA1-ExtraBold.tff') format('tff')
+}
+
+@font-face {
+  font-family: "Gothic A1 Black";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/Gothic_A1/GothicA1-Black.tff') format('tff')
+}
+
+/* ---------------- */
+
 :root {
   --text: #451e51;
   --text-dark-mode: #fffae8;
@@ -80,7 +220,7 @@ body {
 .date {
   font: 0.8rem var(--san);
   font-weight: 0.8rem;
-  font-style: italic;
+  font-style: normal;
   opacity: 0.7;
 }
 
