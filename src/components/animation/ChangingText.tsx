@@ -61,14 +61,14 @@ export default function ChangingText() {
     }, [])
 
     return (
-        <span className="header">
-            Hi, I'm{" "}
+        <header className="header">
+            <h1 className="w-full inline">Hi, I'm{" "}</h1>
             <span className={`header cursor-crosshair transition-all duration-300 ${isAnimating ? " text-indigo-400" : "text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-indigo-500 hover:brightness-125"}`} onMouseEnter={() => {
                 if (isAnimating) return;
                 triggerAnimation(occupations);
             }}>
                 <span ref={wordsRef}></span>
             </span>
-        </span>
+        </header>
     )
 }
