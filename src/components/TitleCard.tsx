@@ -70,7 +70,7 @@ export default function TitleCard() {
                 </div>
                 <div className="max-w-[80%] mt-5 max-sm:self-center">
                     <span className="body">
-                        Hi, my name is <b>Elliot Phua</b>. I'm a Software Engineer at <a target="_blank" href="https://www.visa.com/" className="decoration-dotted underline">Visa</a>, specializing in building functional and highly-scalable systems. My background in Arts, Design and Technology has taught me to approach challenges with systematic thinking and a designer's eye.
+                        Hi, my name is <h1 className="inline"><b>Elliot Phua</b></h1>. I'm a Software Engineer at <a target="_blank" href="https://www.visa.com/" className="decoration-dotted underline">Visa</a>, specializing in building functional and highly-scalable systems. My background in Arts, Design and Technology has taught me to approach challenges with systematic thinking and a designer's eye.
                         <br /><br />
                         I enjoy tinkering, solving challenges and creating positive impacts in the world. This is my journey so far and I am always learning and growing.
                         <br /><br />
