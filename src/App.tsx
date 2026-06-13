@@ -7,7 +7,6 @@ import { ThemeProvider, createTheme } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
 import { DarkModeContext } from "./provider/DarkProvider"
 import ToTopButton from "./components/ToTopButton"
-import { Helmet, HelmetProvider } from "react-helmet-async"
 import NavBar from "./components/NavBar"
 import MainBody from "./sections/MainBody"
 import FooterSection from "./sections/FooterSection"
@@ -38,14 +37,8 @@ export default function App() {
         }
     }, [alertDetails.isAlert, setAlertDetails])
     return (
-        <HelmetProvider>
             <ThemeProvider theme={darkTheme}>
                 <CssBaseline />
-                {/* seo */}
-                <Helmet>
-                    <title>Elliot Phua</title>
-                    <meta name="description" content="Elliot Phua's Portfolio Site" />
-                </Helmet>
                 {/* Hero */}
                 <div className="flex flex-col justify-center w-full h-fit pb-7">
                     <TitleCard />
@@ -65,6 +58,5 @@ export default function App() {
                     <NavBar />
                 </div>
             </ThemeProvider>
-        </HelmetProvider>
     )
 }
